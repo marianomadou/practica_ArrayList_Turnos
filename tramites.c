@@ -23,8 +23,7 @@ eTramite* tramite_turnoUrgente(int numTurno)
 
     if(tramite != NULL)
     {
-
-        printf("Ingrese dni: ");////validar
+        printf("Ingrese dni: ");
         scanf("%ld",&dniAux);
 
         tramite->dni=dniAux;
@@ -44,7 +43,6 @@ eTramite* tramite_turnoRegular(int numTurno)
 
     if(tramite != NULL)
     {
-
         printf("Ingrese dni: ");
         scanf("%ld",&dniAux);
 
@@ -115,28 +113,28 @@ void tramite_listarPendientes(ArrayList* listaUrgente, ArrayList* listaRegular)
                 }
 
             }
-            else
-            {
-                printf("No hay tramites regulares pendientes.\n");
-            }
+                else
+                {
+                    printf("No hay tramites regulares pendientes.\n");
+                }
 }
 int tramite_ordenarDNI(void* tramite1, void* tramite2)
 {
     int returnAux;
     eTramite* tramiteUno = (eTramite*) tramite1;
     eTramite* tramiteDos = (eTramite*) tramite2;
-    if(tramiteUno->dni > tramiteDos->dni)
-    {
-        returnAux =1;
-    }
-    else if( tramiteUno->dni < tramiteDos->dni)
-    {
-        returnAux =-1;
-    }
-    else
-    {
-        returnAux = 0;
-    }
+        if(tramiteUno->dni > tramiteDos->dni)
+        {
+            returnAux =1;
+        }
+            else if( tramiteUno->dni < tramiteDos->dni)
+            {
+                returnAux =-1;
+            }
+                else
+                {
+                    returnAux = 0;
+                }
     return returnAux;
 }
 
