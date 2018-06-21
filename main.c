@@ -27,7 +27,7 @@ int main()
     ArrayList* listaUrgente= al_newArrayList();
     ArrayList* listaRegular= al_newArrayList();
     ArrayList* listaAtendido= al_newArrayList();
-    //ArrayList* clon=al_newArrayList();
+    ArrayList* clon=al_newArrayList();
 
     eTramite* aux;
 
@@ -36,9 +36,9 @@ int main()
 
     do
     {
-        printf("1)Tramite urgente\n2)Tramite regular\n3)Proximo cliente\n4)Listar\n5)Informar\n6)Salir\n");
-        // printf("1)Tramite urgente\n2)Tramite regular\n3)Proximo cliente\n4)Listar\n5)Informar\n6)salir\n7)Sublist\n8)Sublist\n9-Set\n10)Al-contein\n");
-        printf("11)clear\n12)push\nIngrese numero de opcion: ");
+        //printf("1)Tramite urgente\n2)Tramite regular\n3)Proximo cliente\n4)Listar\n5)Informar\n6)Salir\n");
+        printf("1)Tramite urgente\n2)Tramite regular\n3)Proximo cliente\n4)Listar\n5)Informar\n6)salir\n7)al_Clone\n8)al_Sublist\n9-Set\n10)al-ContainsAll\n");
+        printf("11)al_Clear\n12)al_Push\nIngrese numero de opcion: ");
         scanf("%d",&opcion);
     printf("\n\n");
         switch(opcion)
@@ -116,7 +116,7 @@ int main()
         case 6:
             seguir='n';
             break;
-   /*     case 7:
+        case 7:
             clon=al_clone(listaAtendido);
 
             printf("Lista clonada\n");
@@ -145,6 +145,9 @@ int main()
                     printf("DNI:%ld\tTurno: %d\n",aux->dni,aux->turno);
                 }
             }
+
+
+
                 printf("\n");
 
                 getche();
@@ -162,12 +165,12 @@ int main()
                     }
             break;
         case 10:
-            printf("al.contains\n");
+            printf("al_containsAll\n");
 
             if(!al_containsAll(listaAtendido,listaUrgente))
-                printf("No lo contiene");
+                printf("No lo contiene/n");
                 else
-                     printf("Lo contiene");
+                     printf("Lo contiene/n");
 
                     break;
         case 11:
@@ -191,7 +194,7 @@ int main()
                     printf("No esta vacio");
                     else
                         printf("null");
-                    break;              */
+                    break;
         }
 
     }
