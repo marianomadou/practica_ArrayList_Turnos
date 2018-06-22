@@ -7,14 +7,13 @@
 /*
 * Opciones del sistema:
 *
-*1. TRAMITE   URGENTE: Se  otorga  un  numero  de  turno  para  los tramites urgentes.
+*1. TRAMITE URGENTE: Se  otorga  un  numero  de  turno  para  los tramites urgentes.
 *2. TRAMITE REGULAR: Se  otorga un numero  de turno para  los tramites regulares.
 *3. PROXIMO CLIENTE: El sistema le indicara al usuario quien es el próximo turno a ser atendido y a que tramite corresponde.
 *4. LISTAR: En esta opción se listan las personas pendientes de ser atendidas en cada tramite.
 *5. INFORMAR:  Los clientes atendidos en cada uno de los tramites ordenados por DNI de manera descendente.
 *
 */
-
 
 int main()
 {
@@ -36,9 +35,11 @@ int main()
 
     do
     {
-        //printf("1)Tramite urgente\n2)Tramite regular\n3)Proximo cliente\n4)Listar\n5)Informar\n6)Salir\n");
-        printf("1)Tramite urgente\n2)Tramite regular\n3)Proximo cliente\n4)Listar\n5)Informar\n6)salir\n7)al_Clone\n8)al_Sublist\n9-Set\n10)al-ContainsAll\n");
-        printf("11)al_Clear\n12)al_Push\nIngrese numero de opcion: ");
+        printf("-----------------------------\n");
+        printf("\n- CLINICA - URGENCIAS 24 HS -\n");
+        printf("\n-----------------------------\n");
+        printf("1)Tramite URGENTE\n2)Tramite REGULAR\n3)Proximo cliente\n4)Listar\n5)Informar\n6)Salir\n");
+        printf("\nIngrese numero de opcion: ");
         scanf("%d",&opcion);
     printf("\n\n");
         switch(opcion)
@@ -97,8 +98,7 @@ int main()
                         printf("DNI:%ld\tTurno: %d\n",aux->dni,aux->turno);
                     }
                 }
-
-            printf("Tramites regulares atendidos:\n");
+            printf("\nTramites regulares atendidos:\n");
 
                 for(i=0; i<al_len(listaAtendido); i++)
                 {
@@ -108,7 +108,6 @@ int main()
                         printf("DNI:%ld\tTurno: %d\n",aux->dni,aux->turno);
                     }
                 }
-
                 getche();
                 system("cls");
                 break;
@@ -145,11 +144,7 @@ int main()
                     printf("DNI:%ld\tTurno: %d\n",aux->dni,aux->turno);
                 }
             }
-
-
-
                 printf("\n");
-
                 getche();
                 system("cls");
                 break;
@@ -202,4 +197,5 @@ int main()
 
     return 0;
 }
-
+//printf("1)Tramite urgente\n2)Tramite regular\n3)Proximo cliente\n4)Listar\n5)Informar\n6)salir\n7)al_Clone\n8)al_Sublist\n9-Set\n10)al-ContainsAll\n");
+//printf("11)al_Clear\n12)al_Push");

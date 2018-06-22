@@ -601,5 +601,3 @@ int contract(ArrayList* this,int index)
     }
     return returnAux;
 }
-
-

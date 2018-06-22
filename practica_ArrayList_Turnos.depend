@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1529695001 source:c:\test\mmadou\practica_arraylist_turnos-master\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529695054 c:\test\mmadou\practica_arraylist_turnos-master\arraylist.h
+
+1529698183 source:c:\test\mmadou\practica_arraylist_turnos-master\tramites.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"tramites.h"
+
+1529695149 c:\test\mmadou\practica_arraylist_turnos-master\tramites.h
+
+1529699078 source:c:\test\mmadou\practica_arraylist_turnos-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"ArrayList.h"
+	"tramites.h"
+

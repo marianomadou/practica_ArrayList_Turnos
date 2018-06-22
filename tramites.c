@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "arrayList.h"
+#include "ArrayList.h"
 #include "tramites.h"
 
 eTramite* tramite_newTramite()
@@ -14,7 +14,6 @@ eTramite* tramite_newTramite()
     }
    return returnaux;
 }
-
 
 eTramite* tramite_turnoUrgente(int numTurno)
 {
@@ -30,7 +29,7 @@ eTramite* tramite_turnoUrgente(int numTurno)
         tramite->idTramite=100;
         tramite->turno =numTurno;
 
-        printf("Tramite urgente cargado\nNumero de turno:%d\n\n",tramite->turno);
+        printf("\nTramite urgente CARGADO!\nNumero de turno:%d\n\n",tramite->turno);
     }
     return tramite ;
 }
@@ -50,7 +49,7 @@ eTramite* tramite_turnoRegular(int numTurno)
         tramite->idTramite=102;
         tramite->turno =numTurno;
 
-        printf("Tramite urgente cargado\nNumero de turno:%d\n\n",tramite->turno);
+        printf("\nTramite regular CARGADO!\nNumero de turno:%d\n\n",tramite->turno);
     }
     return tramite ;
 }
@@ -62,18 +61,17 @@ void tramite_siguiente(ArrayList* listaUrgente, ArrayList* listaRegular, ArrayLi
     eTramite* atendido;
     if(listaUrgente->size!=0)
             {
-                printf("Proximo cliente:");
+                printf("Proximo cliente: \n");
                 aux=(eTramite*)al_get(listaUrgente,0);
-                printf("Tramite urgente.\nTurno:%d \t dni:%ld \n",aux->turno,aux->dni);
-
+                printf("Tramite urgente.\nTurno:%d \nDNI:%ld \n\n",aux->turno,aux->dni);
                 atendido=(eTramite*)al_pop(listaUrgente,0);
                 al_add(listaAtendido,aux);
             }
             else if(listaRegular->size!=0)
             {
-                printf("Proximo cliente:\t");
+                printf("Proximo cliente: \n");
                 aux=(eTramite*)al_get(listaRegular,0);
-                printf("Tramite regular.\nTurno:%d \t dni:%ld \n\n",aux->turno,aux->dni);
+                printf("Tramite regular.\nTurno:%d \nDNI:%ld \n\n",aux->turno,aux->dni);
                 atendido=(eTramite*) al_pop(listaRegular,0);
                 al_add(listaAtendido,atendido);
             }
@@ -92,7 +90,7 @@ void tramite_listarPendientes(ArrayList* listaUrgente, ArrayList* listaRegular)
                 for(i=0;i<listaUrgente->size;i++)
                 {
                     aux=(eTramite*) al_get(listaUrgente,i);
-                    printf("Tramites urgentes:\n");
+                    printf("Tramite urgente:\n");
                     printf("Turno: %d\n",aux->turno);
                     printf("DNI: %ld\n\n",aux->dni);
                 }
@@ -107,11 +105,10 @@ void tramite_listarPendientes(ArrayList* listaUrgente, ArrayList* listaRegular)
                 for(i=0;i<listaRegular->size;i++)
                 {
                     aux=(eTramite*) al_get(listaRegular,i);
-                    printf("Tramites Regulares:\n");
+                    printf("Tramite Regular:\n");
                     printf("Turno: %d\n",aux->turno);
-                    printf("Dni: %ld\n\n",aux->dni);
+                    printf("DNI: %ld\n\n",aux->dni);
                 }
-
             }
                 else
                 {
@@ -137,4 +134,3 @@ int tramite_ordenarDNI(void* tramite1, void* tramite2)
                 }
     return returnAux;
 }
-
